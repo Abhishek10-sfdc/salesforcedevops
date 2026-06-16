@@ -1,0 +1,11 @@
+<template>
+    <lightning-record-picker
+        label="Recommeded Account Person"
+        placeholder="Search Accounts"
+        object-api-name="Account"
+        value={selectedAccountId}
+        onchange={handleChange}
+        filter={filterValue}
+        required>
+    </lightning-record-picker>
+</template>

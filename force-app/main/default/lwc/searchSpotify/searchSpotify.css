@@ -1,0 +1,60 @@
+.track-container{
+    font-family: "Arail", "sans-serif";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.album-info{
+    display: flex;
+    align-items: center;
+}
+
+.album-cover{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.track-details{
+    max-width: 400px;
+}
+
+.track_name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+
+.artists{
+    font-size: 1rem;
+    color: #666;
+
+}
+
+.popularity{
+    font-size: 1rem;
+    color: #444;
+    margin-top: 10px;
+}
+
+.album-link{
+    font-size: 1rem;
+    color: #1db954;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.release-date{
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #888;
+}

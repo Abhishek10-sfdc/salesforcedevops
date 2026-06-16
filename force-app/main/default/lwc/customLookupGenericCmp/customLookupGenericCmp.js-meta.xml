@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="objectName" required="true" type="String" label="Enter Object API Name" default="Account" />
+            <property name="objectLabel" required="true" type="String" label="Enter Object Name" default="Account" />
+            <property name="objectIcon" required="true" type="String" label="Enter Utility Icon Name" default="standard:account" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

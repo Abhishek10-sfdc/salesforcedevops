@@ -1,0 +1,56 @@
+<template>
+    <!--header-->
+    <div class="slds-modal__header slds-text-heading_large">
+        Add Multiple Contacts
+    </div>
+    <!--Body-->
+    <div>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped"
+            aria-label="Example table of Opportunities with striped rows">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="First Name">First Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Last Name">Last Name<span class="slds-required">*</span></div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Email">Email</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Gender">Gender</div>
+                    </th>
+                    <th class="" scope="col">
+                        <lightning-button-icon icon-name="utility:adduser" variant="brand" alternative-text="Add user" class="slds-m-left_xx-small" title="Add user" onclick={addContactHandler}></lightning-button-icon>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={contacts} for:item="conRec">
+                    <tr class="slds-hint-parent" key={conRec.tempId}>
+                        <td data-label="First Name">
+                            <lightning-input data-temp-id={conRec.tempId} type="text" name="FirstName" label="First Name" variant="label-hidden" placeholder="Enter first name" onblur={inputHandler}></lightning-input>
+                        </td>
+                        <td data-label="Last Name">
+                            <lightning-input data-temp-id={conRec.tempId} type="text" name="LastName" label="Last Name" variant="label-hidden" placeholder="Enter last name" onblur={inputHandler} required></lightning-input>
+                        </td>
+                        <td data-label="Email">
+                            <lightning-input data-temp-id={conRec.tempId} type="email" name="Email" label="Email" variant="label-hidden" placeholder="Enter your email" onblur={inputHandler}></lightning-input>
+                        </td>
+                        <td data-label="Gender">
+                            <lightning-combobox data-temp-id={conRec.tempId} label="Gender" name="GenderIdentity" variant="label-hidden" placeholder="Select gender" options={genderIdentityOptions} onchange={inputHandler}></lightning-combobox>
+                        </td>
+                        <td data-label="Amount">
+                            <lightning-button-icon data-temp-id={conRec.tempId} icon-name="utility:delete"  variant="brand" alternative-text="Delete" class="slds-m-left_xx-small" title="Delete" onclick={deleteHandler}></lightning-button-icon>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+    <!--Footer-->
+    <div class="slds-modal__footer">
+        <lightning-button label="Submit" variant="Brand" onclick={submitHandler}></lightning-button>
+    </div>
+</template>

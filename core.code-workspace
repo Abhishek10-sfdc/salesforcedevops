@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "c:/Users/Dell/OneDrive/Documents/SalesforceApplicationProject"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "c:/Users/Dell/OneDrive/Documents/SalesforceApplicationProject"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "c:\\Users\\Dell\\OneDrive\\Documents\\SalesforceApplicationProject\\.eslintrc.json"
+    }
+  }
+}
