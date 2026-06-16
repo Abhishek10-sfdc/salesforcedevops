@@ -14,7 +14,7 @@ global with sharing class AccountBatchApex implements Database.Batchable<sObject
             accountUpdateCount++;
             accUpdateList.add(accRec);
         }
-        System.debug('Limits.getQueueableJobs()---->'+Limits.getQueueableJobs());
+        System.debug('Limits.getQueueableJobs()->'+Limits.getQueueableJobs());
         if(!accUpdateList.isEmpty()){
             update accUpdateList;
             batchCount++;
